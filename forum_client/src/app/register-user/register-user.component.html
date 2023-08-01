@@ -1,1 +1,10 @@
-<p>register-user works!</p>
+<form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
+    <div class="register-form">
+        <div class="register-form-items">
+            <input name="username" type="text" [(ngModel)]="model.userName" placeholder="Username">
+            <input name="password" type="password" [(ngModel)]="model.password" placeholder="Password">
+            <input name="confirmPassword" type="password" [(ngModel)]="model.confirmPassword" placeholder="Confirm Password">
+            <button [disabled]="!registerForm.valid" class="submit">Register</button>
+        </div>
+    </div>
+</form>
