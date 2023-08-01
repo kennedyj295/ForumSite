@@ -1,0 +1,40 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.login-form-items {
+    display: flex;
+    flex-direction: column;
+    transform: scale(2.5);
+}
+
+.login-form-items input:first-of-type {
+ margin-bottom: 8px;
+ padding: 4px;   
+}
+
+.login-form-items input:last-of-type {
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+.login-form-items button {
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 6px;
+    background-color: rgba(0, 136, 169, 1);
+    transition: all 0.3s ease 0s;
+    border: none;
+    color: #edf0f1;
+}
+
+.login-form-items button:hover {
+    background-color: black;
+}
