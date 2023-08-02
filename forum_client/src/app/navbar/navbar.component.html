@@ -9,5 +9,6 @@
         </nav>
         <a class="cta" routerLink="/login-page" *ngIf="!(accountService.currentUser$ | async)"><button>Log In</button></a>
         <a class="cta" routerLink="/register" *ngIf="!(accountService.currentUser$ | async)"><button>Register</button></a>
-        <a class="cta" routerLink="/register" *ngIf="accountService.currentUser$ | async"><button>Log Out</button></a>
+        <a class="cta" routerLink="/register" *ngIf="accountService.currentUser$ | async" (click)="logout()"><button>Log Out</button></a>
+        <!-- TODO: implement log out functionality -->
     </header>

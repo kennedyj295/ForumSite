@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumPostComponent } from './forum-post/forum-post.component';
+import { AddForumPostComponent } from './add-forum-post/add-forum-post.component';
+import { EditForumPostComponent } from './edit-forum-post/edit-forum-post.component';
+import { ForumCommentComponent } from './forum-comment/forum-comment.component';
+import { ForumPostListComponent } from './forum-post-list/forum-post-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { ForumPostComponent } from './forum-post/forum-post.component';
     LoginComponent,
     HomeComponent,
     RegisterUserComponent,
-    ForumPostComponent
+    ForumPostComponent,
+    AddForumPostComponent,
+    EditForumPostComponent,
+    ForumCommentComponent,
+    ForumPostListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,3 +38,5 @@ import { ForumPostComponent } from './forum-post/forum-post.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// TODO: implement route guards
