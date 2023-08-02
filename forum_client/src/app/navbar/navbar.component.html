@@ -1,11 +1,13 @@
     <header>
         <img class="logo" src="../../assets/img/logo.png" alt="logo">
+        <!-- TODO: put the logo in an anchor tag -->
         <nav>
             <ul class="nav__links">
                 <li><a routerLink="/all-forums">All Forums</a></li>
-                <li><a routerLink="my-favorites">Favorites</a></li>
+                <li *ngIf="accountService.currentUser$ | async"><a routerLink="my-favorites">Favorites</a></li>
             </ul>
         </nav>
-        <a class="cta" routerLink="/login-page"><button>Log In</button></a>
-        <a class="cta" routerLink="/register"><button>Register</button></a>
+        <a class="cta" routerLink="/login-page" *ngIf="!(accountService.currentUser$ | async)"><button>Log In</button></a>
+        <a class="cta" routerLink="/register" *ngIf="!(accountService.currentUser$ | async)"><button>Register</button></a>
+        <a class="cta" routerLink="/register" *ngIf="accountService.currentUser$ | async"><button>Log Out</button></a>
     </header>

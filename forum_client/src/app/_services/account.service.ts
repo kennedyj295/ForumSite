@@ -11,6 +11,7 @@ export class AccountService {
   
   baseUrl = environment.apiUrl;
   private currentUserSource = new BehaviorSubject<User | null>(null);
+  currentUser$ = this.currentUserSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +20,16 @@ export class AccountService {
       map((response: User) => {
         const user = response;
         if(user) {
+          this.setCurrentUser(user);
+        }
+      })
+    )
+  }
+
+  registerUser(model: any) {
+    return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
+      map (user => {
+        if (user) {
           this.setCurrentUser(user);
         }
       })

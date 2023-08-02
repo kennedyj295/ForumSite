@@ -38,8 +38,16 @@
     transition: all 0.3s ease 0s;
     border: none;
     color: #edf0f1;
+    margin-bottom: 5px;
 }
 
 .register-form-items button:hover {
     background-color: black;
+}
+
+.invalid-feedback {
+    font-size: 10px;
+    margin-left: 13px;
+    height: -10px;
+    padding: 2px;
 }
