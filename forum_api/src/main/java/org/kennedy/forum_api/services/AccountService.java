@@ -29,9 +29,6 @@ public class AccountService {
         authorities.add(userRole);
 
         User registeredUser = new User(username, encodedPassword, authorities);
-        System.out.println("howdy " + registeredUser.getPassword());
-
-        //TODO: encoded password is getting returned in our http response, need to add a login DTO
 
         return userRepository.save(registeredUser);
     }
