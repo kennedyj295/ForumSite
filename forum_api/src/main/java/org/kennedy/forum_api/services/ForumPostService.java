@@ -1,5 +1,6 @@
 package org.kennedy.forum_api.services;
 
+import org.kennedy.forum_api.dtos.ForumPostDTO;
 import org.kennedy.forum_api.models.ForumPost;
 import org.kennedy.forum_api.repository.ForumPostRepository;
 import org.springframework.beans.factory.annotation.Autowired;

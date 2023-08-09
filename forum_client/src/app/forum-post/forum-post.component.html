@@ -1,10 +1,11 @@
 <div class="forum-post">
     <div class="post-image-container">
-        <h6 class="post-image-heading">Image Title</h6>
+        <!-- <img [src]="post?.postImage" alt="sample" class="post-image"> -->
         <img src="../../assets/img/sample_forum_image.png" alt="sample" class="post-image">
+        <button (click)="goToUser(post?.ownerUserId)" class="username-link">User: {{post?.ownerUserId}}</button>
     </div>
     <div class="post-body-container">
-        <h6 class="post-body-heading">Author</h6>
+        <h6 class="post-body-heading">{{post?.postTitle}}</h6>
         <p class="post-text">{{post?.postBody}}</p>
     </div>
     <div class="post-button-container">

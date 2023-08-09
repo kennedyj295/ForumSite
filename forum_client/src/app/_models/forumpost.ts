@@ -3,5 +3,5 @@ export interface ForumPost {
     postTitle: string;
     postBody: string;
     postImage: Blob;
-    ownerId: number;
+    ownerUserId: string;
 }

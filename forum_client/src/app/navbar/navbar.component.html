@@ -3,7 +3,7 @@
         <!-- TODO: put the logo in an anchor tag -->
         <nav>
             <ul class="nav__links">
-                <li><a routerLink="/all-forums">All Forums</a></li>
+                <li><a routerLink="/forums">All Forums</a></li>
                 <li *ngIf="accountService.currentUser$ | async"><a routerLink="my-favorites">Favorites</a></li>
             </ul>
         </nav>

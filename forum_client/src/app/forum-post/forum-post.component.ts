@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ForumPostService } from '../_services/forum-post.service';
 import { ForumPost } from '../_models/forumpost';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-forum-post',
@@ -10,8 +11,12 @@ import { ForumPost } from '../_models/forumpost';
 export class ForumPostComponent {
   @Input() post: ForumPost | undefined;
 
-  constructor() {
+  constructor(private route: Router) {
     
+  }
+
+  goToUser(username?: string): void {
+    this.route.navigate(['/users', this.post?.ownerUserId]);
   }
   
 }

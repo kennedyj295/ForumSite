@@ -23,6 +23,7 @@ export class ForumPostListComponent implements OnInit {
       next: response => {
         if (response) {
           this.posts = response;
+          console.log(this.posts);
         }
       }
     })

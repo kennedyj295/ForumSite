@@ -13,6 +13,7 @@ import { AddForumPostComponent } from './add-forum-post/add-forum-post.component
 import { EditForumPostComponent } from './edit-forum-post/edit-forum-post.component';
 import { ForumCommentComponent } from './forum-comment/forum-comment.component';
 import { ForumPostListComponent } from './forum-post-list/forum-post-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ForumPostListComponent } from './forum-post-list/forum-post-list.compon
     AddForumPostComponent,
     EditForumPostComponent,
     ForumCommentComponent,
-    ForumPostListComponent
+    ForumPostListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
