@@ -10,9 +10,14 @@
 }
 
 .register-form-items {
+    
     display: flex;
     flex-direction: column;
     transform: scale(2.5);
+    border: solid;
+    padding: 40px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
 }
 
 .register-form-items input:first-of-type {

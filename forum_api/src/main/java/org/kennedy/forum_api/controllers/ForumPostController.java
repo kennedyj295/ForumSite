@@ -20,6 +20,6 @@ public class ForumPostController {
 
     @GetMapping("/all")
     public List<ForumPost> getAllPosts() {
-
+        return forumPostService.loadAllForumPosts();
     }
 }

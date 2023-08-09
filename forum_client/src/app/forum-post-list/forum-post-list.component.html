@@ -1,9 +1,3 @@
-<div class="post-container">
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
-    <app-forum-post class="forum-post"></app-forum-post>
+<div class="post-container" *ngFor="let fp of posts">
+    <app-forum-post class="forum-post" [post]="fp"></app-forum-post>
 </div>

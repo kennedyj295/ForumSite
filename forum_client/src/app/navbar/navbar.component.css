@@ -5,6 +5,11 @@
     background-color: #24252A;
 }
 
+.nav-heading {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+}
+
 li, a, button {
     font-family: sans-serif;
     font-weight: 500;

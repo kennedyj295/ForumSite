@@ -3,6 +3,7 @@ package org.kennedy.forum_api.models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "forum_posts", schema = "dbo")
 public class ForumPost {
 
     @Id
@@ -11,13 +12,16 @@ public class ForumPost {
 
     @ManyToOne
     @JoinColumn(name="owneruserid")
-    private Integer ownerUserId;
+    private User ownerUserId;
 
+    @Column(name = "posttitle")
     private String postTitle;
 
+    @Column(name = "postbody")
     private String postBody;
 
     @Lob
+    @Column(name = "postimage")
     private byte[] postImage;
 
     public Integer getId() {
@@ -28,11 +32,11 @@ public class ForumPost {
         this.id = id;
     }
 
-    public Integer getOwnerUserId() {
+    public User getOwnerUserId() {
         return ownerUserId;
     }
 
-    public void setOwnerUserId(Integer ownerUserId) {
+    public void setOwnerUserId(User ownerUserId) {
         this.ownerUserId = ownerUserId;
     }
 
